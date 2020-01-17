@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 Future<List> login1() async {
     final response = await http.post('http://192.168.1.10/LAB-System/api/login1.php', body: {
-      'email': controllerEmail.text,
+      'username': controllerUser.text,
       'password': controllerPass.text,
     });
   
@@ -100,6 +100,7 @@ Future<List> login1() async {
                 child: Column(
                   children: <Widget>[
                     TextField(
+                      controller: controllerUser,
                       decoration: InputDecoration(
                           labelText: 'EMAIL',
                           labelStyle: TextStyle(
@@ -111,6 +112,7 @@ Future<List> login1() async {
                     ),
                     SizedBox(height: 20.0),
                     TextField(
+                      controller: controllerPass,
                       decoration: InputDecoration(
                           labelText: 'PASSWORD',
                           labelStyle: TextStyle(
