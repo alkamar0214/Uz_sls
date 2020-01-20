@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool _rememberMe = false;
-  TextEditingController controllerEmail = new TextEditingController();
+  TextEditingController controllerUser = new TextEditingController();
   TextEditingController controllerPass = new TextEditingController();
 
   String msg = '';
