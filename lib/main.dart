@@ -3,7 +3,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:uz_slslab/borrower.dart';
-import 'package:uz_slslab/myhomepage.dart';
 import 'signup.dart';
 import 'package:http/http.dart' as http;
 
@@ -14,12 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       debugShowCheckedModeBanner: false, 
-      home: new MyHomePage(),
       routes: <String, WidgetBuilder>{
         '/signup': (BuildContext context) => new SignupPage(),
         '/borrower': (BuildContext context) => new Borrower(),
-        '/myhomepage': (BuildContext context) => new MyHomePage(),
+
       },
+      home: new MyHomePage(),
     );
   }
 }
